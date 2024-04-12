@@ -4,8 +4,11 @@ import numpy as np
 
 model = pickle.load(open('model.pkl','rb'))
 app = Flask(__name__)
-@app.route('/')
-def man():
+@app.route('/', methods=['GET']) 
+def home(): 
+    return "Homepage"
+@app.route('/',methods=['GET'])
+def main():
     return render_template('home.html')
 @app.route('/Predict',methods=['POST'])
 def home():
