@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction</title>
+    <style>
+        /* Paste the CSS here */
+        *,
+        *:before,
+        *:after {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: #384047;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <p>The predicted species is: 
+    {% if data == 0 %}
+        Setosa
+    {% elif data == 1 %}
+        Versicolor
+    {% elif data == 2 %}
+        Virginica
+    {% else %}
+        Unknown
+    {% endif %}
+    </p>
+    <a href="/">Back to Home</a>
+</body>
+</html>
