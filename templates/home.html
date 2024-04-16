@@ -189,20 +189,21 @@
   to { transform: scaleX(1); }
 }
     </style>
-</head>
+
 <body>
     <h1>Enter Data for Prediction of Iris Species</h1>
     
     <form action="/Predict" method="post">
         <label for="a">Sepal Length (in cm):</label><br>
-        <input type="text" id="a" name="a"><br>
-        <label for="b">Speal Width (in cm):</label><br>
-        <input type="text" id="b" name="b"><br>
+        <input type="number" id="a" name="a" step="0.01" required><br>
+        <label for="b">Sepal Width (in cm):</label><br>
+        <input type="number" id="b" name="b" step="0.01" required><br>
         <label for="c">Petal Length (in cm):</label><br>
-        <input type="text" id="c" name="c"><br>
+        <input type="number" id="c" name="c" step="0.01" required><br>
         <label for="d">Petal Width (in cm):</label><br>
-        <input type="text" id="d" name="d"><br><br>
+        <input type="number" id="d" name="d" step="0.01" required><br><br>
         <center><input type="submit" class="btn" value="Predict"></center>
     </form>
 </body>
+
 </html>
