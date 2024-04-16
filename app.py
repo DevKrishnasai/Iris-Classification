@@ -4,9 +4,8 @@ import numpy as np
 
 model = pickle.load(open('model.pkl','rb'))
 app = Flask(__name__)
-@app.route('/', methods=['GET']) 
-def home(): 
-    return "Homepage"
+
+
 @app.route('/',methods=['GET'])
 def main():
     return render_template('home.html')
@@ -20,4 +19,4 @@ def home():
     pred = model.predict(ar)
     return render_template('prediction.html',data=pred)
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=80)
